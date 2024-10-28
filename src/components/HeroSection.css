@@ -1,0 +1,39 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  padding: 0 50px; /* Menambahkan padding di kiri dan kanan */
+  background-color: #f4f4f9;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Menyelaraskan konten ke kiri */
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 5vw; /* Responsif menggunakan viewport width */
+  margin: 0; /* Menghapus margin default */
+}
+
+.hero p {
+  font-size: 2vw; /* Responsif menggunakan viewport width */
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.hero-image {
+  max-width: 50%;
+  height: auto;
+}

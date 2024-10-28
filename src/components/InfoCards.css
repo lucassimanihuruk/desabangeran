@@ -1,0 +1,27 @@
+.info-cards {
+  padding: 50px;
+  background-color: #e0f7fa;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Set initial opacity to 0 for smooth animation */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #007BFF;
+}

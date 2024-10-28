@@ -1,0 +1,20 @@
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #e0f7fa;
+  }
+  
+  .contact-section button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .contact-section button:hover {
+    background: #004d40;
+  }
+  

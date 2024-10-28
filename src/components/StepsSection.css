@@ -1,0 +1,26 @@
+.steps-section {
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  opacity: 0; /* Initial opacity for smooth transition */
+}
+
+.step-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.step-details {
+  flex: 1;
+}

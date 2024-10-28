@@ -1,0 +1,136 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #58c5cf;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .header h1 {
+    color: #333;
+  }
+  
+  .header-content {
+    margin-top: 1rem;
+  }
+  
+  .potensi-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    opacity: 0; /* Initial opacity for smooth transition */
+  }
+  
+  .potensi-section img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .potensi-content h3 {
+    color: #007acc;
+    margin-top: 1rem;
+  }
+  
+  .footer {
+    background-color: #e0f7f9;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+  
+  .footer h3 {
+    color: #333;
+  }
+  
+  .button {
+    padding: 0.8rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Footer */
+  .blog-footer {
+    background-color: #a2ded0;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .footer-logo {
+    max-width: 200px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .footer-social span {
+    cursor: pointer;
+  }
+  
+  .footer-copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  

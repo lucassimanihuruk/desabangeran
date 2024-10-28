@@ -1,0 +1,159 @@
+/* src/components/Blog.css */
+
+.blog-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f8f8;
+}
+
+/* Header */
+.blog-header {
+  text-align: center;
+  padding: 40px;
+  background-color: #a2ded0;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.blog-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  width: 250px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.blog-image {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.blog-date {
+  background-color: #00c5a4;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.8rem;
+}
+
+.blog-card h2 {
+  font-size: 1.1rem;
+  margin: 15px 0 10px;
+}
+
+.blog-card p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.read-more {
+  background-color: #00c5a4;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.blog-footer {
+  background-color: #a2ded0;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-logo {
+  max-width: 200px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-social span {
+  cursor: pointer;
+}
+
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

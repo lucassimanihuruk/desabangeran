@@ -1,0 +1,23 @@
+.team-section {
+  padding: 50px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Menambahkan ini agar anggota tim rapi jika ada lebih banyak */
+}
+
+.team-member {
+  text-align: center;
+  opacity: 0; /* Initial opacity for smooth transition */
+}
+
+.team-member img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
