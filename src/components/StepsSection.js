@@ -4,9 +4,9 @@ import { useInView } from 'react-intersection-observer';
 import './StepsSection.css';
 
 const stepVariants = {
-  hiddenLeft: { opacity: 0, x: -50 },  // Mengurangi jarak untuk animasi lebih halus
-  hiddenRight: { opacity: 0, x: 50 },  // Mengurangi jarak untuk animasi lebih halus
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } }, // Menambah durasi untuk efek halus
+  hiddenLeft: { opacity: 0, x: -50 },
+  hiddenRight: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
 function Step({ number, title, description, isLeft }) {
@@ -41,30 +41,30 @@ function Step({ number, title, description, isLeft }) {
 function StepsSection() {
   return (
     <section className="steps-section">
-      <h2>Your Idea into Reality</h2>
       <div className="steps-container">
+        <div className="steps-title">VISI & MISI</div>
         <Step
           number="1"
-          title="Your Idea"
-          description="We listen to your ideas and help you plan a strategy for your project."
+          title=""
+          description="'Terwujudnya masyarakat Desa Senggigi yang Bersih, Relegius, Sejahtera, Rapi dan Indah melalui Akselerasi Pembangunan yang berbasis Keagamaan, Budaya Hukum dan Berwawasan Lingkungan dengan berorentasi pada peningkatan Kinerja Aparatur dan Pemberdayaan Masyarakat'"
           isLeft={true}
         />
         <Step
           number="2"
-          title="Strategy Meeting"
-          description="We conduct meetings to finalize the plan and start the development process."
+          title="Pembangunan Jangka Panjang"
+          description="Meningkatkan kesejahtraan masyarakat desa dengan meningkatkan sarana dan prasarana ekonomi warga."
           isLeft={false}
         />
         <Step
           number="3"
-          title="Agile and Scrum Framework"
-          description="We use Agile and Scrum methodologies to ensure efficient project management."
+          title="Pembangunan Jangka Pendek"
+          description="Meningkatkan pelayanan dalam bidang pemerintahan kepada warga masyarakat."
           isLeft={true}
         />
         <Step
           number="4"
-          title="Your Website Goes Live"
-          description="We launch your website and provide ongoing support."
+          title="SENGGIGI BERSERI"
+          description="(Bersih, Relegius, Sejahtera, Rapi, dan Indah)"
           isLeft={false}
         />
       </div>

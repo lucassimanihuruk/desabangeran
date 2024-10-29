@@ -1,129 +1,197 @@
-/* components/BUMDes.css */
+/* Root styling */
 .bumdes {
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .header {
-    text-align: center;
-    padding: 50px;
-    background-color: #e0f7fa;
-  }
-  
-  .header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .services {
-    text-align: center;
-    padding: 50px;
-    background-color: #f0fcfc;
-  }
-  
-  .services h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .services-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-top: 20px;
-  }
-  
-  .service-item {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact {
-    text-align: center;
-    padding: 50px;
-    background-color: #e0f7fa;
-  }
-  
-  .contact button {
-    background-color: #00796b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .online-presence {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #f4f4f9;
-  }
-  
-  .presence-info {
-    max-width: 60%;
-  }
-  
-  .schedule {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 30%;
-  }
-  
-  /* components/BUMDes.css */
-.services-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
-    gap: 20px;
-    padding-top: 20px;
-  }
-  
-  .service-item {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
 
-  /* components/BUMDes.css */
+/* Header styling */
+.header {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #00acc1;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.header p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Services section styling */
+.services {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f0fcfc;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.services h2 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #00acc1;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-item h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #00796b;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.service-item a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #00acc1;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.service-item a:hover {
+  color: #00796b;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  color: #00acc1;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact button {
+  background-color: #00796b;
+  color: white;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact button:hover {
+  background-color: #005b4f;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Online Presence Section */
+.online-presence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f4f4f9;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.presence-info {
+  max-width: 70%;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.schedule {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+  text-align: center;
+}
+
+.schedule h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #00acc1;
+}
+
+.schedule p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer styling */
 .footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 kolom pada perangkat yang lebih kecil */
-    gap: 20px;
-    background-color: hsl(179, 100%, 76%);
-    color: #000000;
-    padding: 40px 20px;
-    text-align: left;
-  }
-  
-  .footer-section {
-    margin-bottom: 20px;
-  }
-  
-  .footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #016505; /* Warna teks judul footer */
-  }
-  
-  .footer-section p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  @media (min-width: 768px) {
-    .footer {
-      grid-template-columns: repeat(4, 1fr); /* Menampilkan 4 kolom pada perangkat yang lebih besar */
-    }
-  }
-  
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  background-color: #00acc1;
+  color: #fff;
+  padding: 50px 20px;
+  border-radius: 12px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+}

@@ -63,6 +63,40 @@ function BUMDes() {
     }
   }, [footerControls, footerInView]);
 
+  // Array untuk setiap layanan beserta deskripsi dan tautan
+  const services = [
+    {
+      title: "Usaha Milik BUMDes",
+      description: "Menyediakan berbagai usaha milik desa yang dikelola untuk kesejahteraan masyarakat.",
+      link: "#usaha-bumdes"
+    },
+    {
+      title: "Produk Unggulan",
+      description: "Produk terbaik desa, mulai dari olahan pertanian hingga peternakan.",
+      link: "#produk-unggulan"
+    },
+    {
+      title: "Pelatihan SDM",
+      description: "Program pelatihan untuk meningkatkan kapasitas sumber daya manusia desa.",
+      link: "#pelatihan-sdm"
+    },
+    {
+      title: "Pemasaran Digital",
+      description: "Strategi pemasaran digital untuk memperluas jangkauan pasar produk desa hingga keluar desa.",
+      link: "#pemasaran-digital"
+    },
+    {
+      title: "Pengelolaan Keuangan",
+      description: "Pengelolaan keuangan yang transparan dan akuntabel untuk usaha desa.",
+      link: "#pengelolaan-keuangan"
+    },
+    {
+      title: "Layanan Konsultasi",
+      description: "Konsultasi usaha dan manajemen untuk warga yang ingin memulai usaha.",
+      link: "#layanan-konsultasi"
+    }
+  ];
+
   return (
     <div className="bumdes">
       {/* Header */}
@@ -87,17 +121,9 @@ function BUMDes() {
         animate={servicesControls}
         variants={sectionVariants}
       >
-        <h2>Our Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy eirmod tempor invidunt ut labore et.</p>
+        <h2>Layanan & Produk </h2>
         <div className="services-list">
-          {[
-            "Usaha Milik BUMDes", 
-            "Produk Unggulan", 
-            "Pelatihan SDM", 
-            "Pemasaran Digital", 
-            "Pengelolaan Keuangan", 
-            "Layanan Konsultasi"
-          ].map((title, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
               className="service-item"
@@ -105,83 +131,13 @@ function BUMDes() {
               animate={{ opacity: 1, y: 0 }} // Animate to visible state
               transition={{ duration: 0.4, delay: index * 0.1 }} // Add delay based on index
             >
-              <h3>{title}</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#">Read More</a>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <a href={service.link}>read more</a>  
             </motion.div>
           ))}
         </div>
       </motion.section>
-
-      {/* Contact Section */}
-      <motion.section
-        ref={contactRef}
-        className="contact"
-        initial="hiddenLeft"
-        animate={contactControls}
-        variants={sectionVariants}
-      >
-        <h2>Interested to work with us?</h2>
-        <p>Hubungi Email dibawah ini</p>
-        <button>Email: bumdes@desa-bangeran.id</button>
-      </motion.section>
-
-      {/* Online Presence Section */}
-      <motion.section
-        ref={onlinePresenceRef}
-        className="online-presence"
-        initial="hiddenRight"
-        animate={onlinePresenceControls}
-        variants={sectionVariants}
-      >
-        <div className="presence-info">
-          <h2>Establishing online presence</h2>
-          <p>
-            Every SaaS website, regardless of niche, must do one thing brilliantly, which is converting visitors into
-            users. At first glance, the site should encourage and guide visitors in a smooth way towards call-to-actions.
-          </p>
-          <p>This goes hand in hand with a responsive design, meaning it needs to be apt for different devices.</p>
-          <p>
-            We use a data-driven approach to measure user response when developing the site. This method usually makes the
-            site quicker to launch, is more cost-effective, and more successful in the long run.
-          </p>
-        </div>
-        <div className="schedule">
-          <h3>Schedule a free session</h3>
-          <div className="calendar">
-            <p>15 Minutes - Web Development SaaS</p>
-            <p>Available Dates: August 2021</p>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Footer */}
-      <motion.footer
-        ref={footerRef}
-        className="footer"
-        initial="hiddenLeft"
-        animate={footerControls}
-        variants={sectionVariants}
-      >
-        <div className="footer-section">
-          <h3>Pemerintah Desa Bangeran</h3>
-          <p>Alamat: Jl. Desa Bangeran No.1, Kec. Sumber, Kab. Rembang</p>
-          <p>Website resmi pemerintah desa untuk mendukung pembangunan desa.</p>
-        </div>
-        <div className="footer-section">
-          <h3>Tentang Kami</h3>
-          <p>BUMDes Bangeran adalah Badan Usaha Milik Desa yang berdedikasi untuk mengembangkan perekonomian desa.</p>
-        </div>
-        <div className="footer-section">
-          <h3>Hubungi Kami</h3>
-          <p>Email: bumdes@desa-bangeran.id</p>
-          <p>Telepon: (021) 12345678</p>
-        </div>
-        <div className="footer-section">
-          <h3>Business Solution</h3>
-          <p>Kami menawarkan berbagai solusi bisnis untuk meningkatkan pendapatan dan kesejahteraan masyarakat desa.</p>
-        </div>
-      </motion.footer>
     </div>
   );
 }

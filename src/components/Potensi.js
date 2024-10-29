@@ -1,4 +1,3 @@
-// src/pages/Potensi.js
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -12,10 +11,9 @@ const potensiVariants = {
 
 const PotensiSection = ({ title, description, imageUrl, isLeft }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false }); // triggerOnce set to false
+  const [ref, inView] = useInView({ triggerOnce: false });
 
   React.useEffect(() => {
-    // Start animation when inView changes
     if (inView) {
       controls.start('visible');
     } else {
@@ -44,33 +42,32 @@ const Potensi = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main className="potensi-main">
         <PotensiSection
           title="Cabai"
-          description="Deskripsi singkat tentang potensi cabai di desa."
+          description="Cabai merupakan salah satu komoditas unggulan yang dihasilkan dari Desa Bangeran. Pertanian cabai di desa ini memiliki potensi besar baik dari segi kualitas maupun kuantitas, berkat kondisi alam yang mendukung dan keahlian petani setempat. Cabai yang dihasilkan dari Desa Bangeran memiliki kualitas yang baik, dengan potensi ekonomi yang tinggi dan pasar yang luas."
           imageUrl="https://statik.tempo.co/data/2024/07/30/id_1323333/1323333_720.jpg"
           isLeft={true}
         />
         <PotensiSection
           title="Kacang"
-          description="Deskripsi singkat tentang potensi kacang di desa."
+          description="Kacang merupakan salah satu komoditas pertanian utama yang dihasilkan dari Desa Bangeran. Produksi kacang di desa ini memberikan kontribusi penting bagi perekonomian masyarakat, baik untuk konsumsi lokal maupun sebagai komoditas perdagangan ke luar daerah. Kacang yang dihasilkan dari Desa Bangeran merupakan salah satu komoditas pertanian yang berpotensi besar dan bernilai ekonomi tinggi."
           imageUrl="https://cdn.digitaldesa.com/uploads/profil/73.14.11.2009/berita/9ffe8bc6985008de0db10e93ad2939ef.jpg"
           isLeft={false}
         />
         <PotensiSection
           title="Jagung"
-          description="Deskripsi singkat tentang potensi jagung di desa."
+          description="Jagung merupakan salah satu hasil pertanian utama di Desa Bangeran yang memiliki peran penting dalam perekonomian desa serta memenuhi kebutuhan pangan lokal. Jagung yang dihasilkan dari desa ini memiliki kualitas baik, berkat dukungan alam dan keterampilan para petani setempat dalam mengelola lahan pertanian. Dengan kondisi alam yang mendukung, teknik budidaya yang tepat, dan adanya inovasi produk olahan, jagung dari Desa Bangeran mampu memenuhi kebutuhan pangan lokal dan menjadi komoditas bernilai ekonomi tinggi."
           imageUrl="https://mediaindonesia.com/cdn-cgi/image/width=800,quality=80,format=webp/https://asset.mediaindonesia.com/news/2024/10/16/1729045200_bc831217ab1a8d08a585.jpg"
           isLeft={true}
         />
         <PotensiSection
-          title="Produk Bumdes"
-          description="Deskripsi singkat tentang produk bumdes di desa."
-          imageUrl="https://patrolihukumindonesia.com/wp-content/uploads/2024/05/IMG-20240518-WA0047-1152x1536.jpg"
+          title="Mangga"
+          description="Mangga merupakan salah satu komoditas unggulan yang dihasilkan oleh Desa Bangeran. Potensi besar buah mangga dari desa ini tidak hanya memenuhi kebutuhan pasar lokal tetapi juga menjadi sumber pendapatan yang penting bagi masyarakat. Dengan kondisi alam yang mendukung, teknik budidaya yang baik, dan dukungan dari pemerintah serta masyarakat, hasil pertanian mangga di desa ini dapat terus meningkatkan kesejahteraan masyarakat."
+          imageUrl="https://gkmdblog.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2023/12/16193752/Blog-Mangga-Indonsia.jpeg"
           isLeft={false}
         />
       </main>
-      <Footer />
     </div>
   );
 };
@@ -97,53 +94,21 @@ const Header = () => {
       <h1>Potensi Unggulan Desa</h1>
       <div className="header-content">
         <p>
-          We take your SaaS idea and make it into reality. We start with going into why and what you are looking for.
-          Then after brainstorming on branding and strategy we are going into the details of what and what and why you
-          want to create a website.
+          Potensi unggulan meliputi hasil-hasil pertanian seperti jagung, kacang-kacangan, tumbuhan sayuran kelor, cabai, mangga, dan lain-lain. 
+        </p>
+        <p>
+          Di samping pertanian, peternakan seperti sapi, kambing, ayam, atau bebek juga bisa menjadi potensi unggulan di desa ini. 
+          Desa Bangeran memiliki sumber daya air yang memadai. 
+        </p>
+        <p>
+          Ini tidak hanya memenuhi kebutuhan pangan lokal tetapi juga dapat dijual ke luar daerah, menambah pendapatan masyarakat. 
+        </p>
+        <p>
+          Dengan pengembangan yang tepat, potensi unggulan Desa Bangeran dapat meningkatkan perekonomian, menyediakan lapangan kerja, 
+          dan melestarikan kekayaan budaya serta lingkungan setempat.
         </p>
       </div>
     </motion.header>
-  );
-};
-
-const Footer = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false });
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeInOut' } });
-    } else {
-      controls.start({ opacity: 0, y: 20 });
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.footer
-      ref={ref}
-      className="footer"
-      initial={{ opacity: 0, y: 20 }}
-      animate={controls}
-    >
-      <div className="footer-section">
-        <h3>Pemerintah Desa Bangeran</h3>
-        <p>Alamat: Jl. Desa Bangeran No.1, Kec. Sumber, Kab. Rembang</p>
-        <p>Website resmi pemerintah desa untuk mendukung pembangunan desa.</p>
-      </div>
-      <div className="footer-section">
-        <h3>Tentang Kami</h3>
-        <p>BUMDes Bangeran adalah Badan Usaha Milik Desa yang berdedikasi untuk mengembangkan perekonomian desa.</p>
-      </div>
-      <div className="footer-section">
-        <h3>Hubungi Kami</h3>
-        <p>Email: bumdes@desa-bangeran.id</p>
-        <p>Telepon: (021) 12345678</p>
-      </div>
-      <div className="footer-section">
-        <h3>Business Solution</h3>
-        <p>Kami menawarkan berbagai solusi bisnis untuk meningkatkan pendapatan dan kesejahteraan masyarakat desa.</p>
-      </div>
-    </motion.footer>
   );
 };
 

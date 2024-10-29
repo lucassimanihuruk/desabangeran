@@ -1,34 +1,27 @@
-/* src/components/Blog.css */
-
+/* Warna dasar biru muda pada seluruh halaman */
 .blog-container {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f0f8f8;
+  background-color: #e0f7fa; /* Biru muda */
 }
 
 /* Header */
 .blog-header {
   text-align: center;
   padding: 40px;
-  background-color: #a2ded0;
+  background-color: #b2ebf2; /* Biru lebih terang */
 }
 
 .blog-title {
   font-size: 2.5rem;
-  color: #333;
+  color: #004d40; /* Biru tua untuk teks */
 }
 
 .blog-description {
   font-size: 1rem;
-  color: #555;
+  color: #006064; /* Biru tua lebih gelap untuk kontras */
   margin-top: 10px;
   margin-bottom: 20px;
-}
-
-.search-bar {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .search-bar input {
@@ -43,7 +36,7 @@
   padding: 10px 15px;
   border-radius: 0 20px 20px 0;
   border: none;
-  background-color: #333;
+  background-color: #004d40; /* Tombol dengan biru lebih gelap */
   color: #fff;
   cursor: pointer;
 }
@@ -57,7 +50,7 @@
 }
 
 .blog-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -65,15 +58,8 @@
   position: relative;
 }
 
-.blog-image {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  border-radius: 8px;
-}
-
 .blog-date {
-  background-color: #00c5a4;
+  background-color: #00acc1; /* Biru sedang untuk label tanggal */
   color: #fff;
   padding: 5px 10px;
   border-radius: 20px;
@@ -86,15 +72,11 @@
 .blog-card h2 {
   font-size: 1.1rem;
   margin: 15px 0 10px;
-}
-
-.blog-card p {
-  font-size: 0.9rem;
-  color: #777;
+  color: #004d40; /* Biru tua untuk judul */
 }
 
 .read-more {
-  background-color: #00c5a4;
+  background-color: #00acc1; /* Tombol "Read More" biru sedang */
   color: #fff;
   padding: 10px 20px;
   border-radius: 20px;
@@ -105,55 +87,60 @@
 
 /* Footer */
 .blog-footer {
-  background-color: #a2ded0;
+  background-color: #b2ebf2; /* Latar belakang biru terang */
   padding: 40px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: left;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px; /* Sudut melengkung untuk footer */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
 }
 
-.footer-logo {
-  max-width: 200px;
+.footer-content h2 {
+  color: #004d40; /* Teks biru tua */
+  margin: 0;
 }
 
-.footer-links {
-  display: flex;
-  gap: 20px;
+.footer-content p {
+  color: #006064; /* Teks biru tua lebih gelap untuk kontras */
 }
 
-.footer-links h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+.footer-content input {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 250px; /* Lebar input */
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 5px;
-}
-
-.footer-links ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-social {
-  display: flex;
-  gap: 10px;
-  font-size: 1.2rem;
-}
-
-.footer-social span {
+.subscribe-button {
+  background-color: #004d40; /* Tombol dengan biru lebih gelap */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 15px; /* Menambahkan margin atas untuk jarak */
+  border: none;
   cursor: pointer;
 }
 
-.footer-copyright {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
+/* Blog Grid Responsif */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .search-bar button {
+    padding: 8px;
+    border-radius: 0 8px 8px 0;
+  }
 }

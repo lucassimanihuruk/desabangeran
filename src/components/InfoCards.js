@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import './InfoCards.css'; // Tambahkan CSS untuk styling
+import './InfoCards.css';
 
 const cardVariants = {
-  hiddenLeft: { opacity: 0, x: -50 },  // Perubahan x untuk animasi lebih halus
-  hiddenRight: { opacity: 0, x: 50 },  // Perubahan x untuk animasi lebih halus
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } }, // Durasi animasi lebih lama untuk kesan halus
+  hiddenLeft: { opacity: 0, x: -50 },
+  hiddenRight: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
 const InfoCard = ({ title, description, link, index }) => {
@@ -39,7 +39,7 @@ const InfoCard = ({ title, description, link, index }) => {
 function InfoCards() {
   const cardData = [
     { title: 'Perangkat BUMDes', description: 'Kepala Desa Beserta Perangkatnya.', link: '#' },
-    { title: 'Usaha Milik BUMDes', description: 'Badan Usaha Miik Desa.', link: '#' },
+    { title: 'Usaha Milik BUMDes', description: 'Badan Usaha Milik Desa.', link: '#' },
     { title: 'Produk Unggulan BUMDes', description: 'Produk-produk Unggulan Desa.', link: '#' },
     { title: 'Potensi Unggulan Desa', description: 'Potensi Pengembangan Produk Unggulan Desa.', link: '#' },
   ];

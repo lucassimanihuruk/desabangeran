@@ -42,14 +42,14 @@ function TeamSection() {
       <div className="team-members">
         <TeamMember
           src="https://bidiknasional.com/wp-content/uploads/2023/08/IMG-20230819-WA0020-627x470.jpg"
-          name="Bang Joss"
-          title="CEO & Founder BUMDes"
+          name="Al Adzim, M.Si"
+          title="Kepala Desa"
           isLeft={true}
         />
         <TeamMember
           src="https://bidiknasional.com/wp-content/uploads/2023/08/IMG-20230819-WA0020-627x470.jpg"
-          name="Al Adzim, M.Si"
-          title="Kepala Desa"
+          name="Bang Joss"
+          title="CEO & Founder BUMDes"
           isLeft={false}
         />
         {/* Tambahkan anggota tim lain di sini */}

@@ -1,136 +1,124 @@
-/* styles.css */
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header {
-    background-color: #58c5cf;
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .header h1 {
-    color: #333;
-  }
-  
-  .header-content {
-    margin-top: 1rem;
-  }
-  
-  .potensi-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem auto;
-    max-width: 700px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    text-align: center;
-    opacity: 0; /* Initial opacity for smooth transition */
-  }
-  
-  .potensi-section img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  .potensi-content h3 {
-    color: #007acc;
-    margin-top: 1rem;
-  }
-  
-  .footer {
-    background-color: #e0f7f9;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .footer-section {
-    margin-bottom: 1rem;
-  }
-  
-  .footer h3 {
-    color: #333;
-  }
-  
-  .button {
-    padding: 0.8rem 1.5rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .info-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  
-  .footer-bottom {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  /* Footer */
-  .blog-footer {
-    background-color: #a2ded0;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: left;
-  }
-  
-  .footer-logo {
-    max-width: 200px;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .footer-links h3 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-links ul li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .footer-social {
-    display: flex;
-    gap: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .footer-social span {
-    cursor: pointer;
-  }
-  
-  .footer-copyright {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Lighter background for contrast */
+}
+
+.header {
+  background-color: #58c5cf;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 4px solid #007acc; /* Bottom border for emphasis */
+}
+
+.header h1 {
+  color: #333;
+  font-size: 2.5rem; /* Larger font size */
+}
+
+.header-content {
+  margin-top: 1rem;
+  color: #555; /* Softer text color */
+}
+
+.potensi-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout */
+  gap: 2rem; /* Spacing between grid items */
+  padding: 1rem; /* Padding around the grid */
+}
+
+.potensi-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.potensi-section:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.potensi-section img {
+  max-width: 100%;
+  border-radius: 12px; /* Match card border radius */
+}
+
+.potensi-content h3 {
+  color: #007acc;
+  margin-top: 1rem;
+  font-size: 1.8rem; /* Increased heading size */
+}
+
+.potensi-content p {
+  color: #666; /* Softer text color */
+  line-height: 1.6; /* Improved readability */
+  margin: 0.5rem 0; /* Spacing adjustments */
+}
+
+/* Footer Styles */
+.blog-footer {
+  background-color: #a2ded0;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-logo {
+  max-width: 200px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s; /* Color transition on hover */
+}
+
+.footer-links ul li a:hover {
+  color: #007acc; /* Change color on hover */
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-social span {
+  cursor: pointer;
+}
+
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

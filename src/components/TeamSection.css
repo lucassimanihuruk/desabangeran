@@ -1,23 +1,62 @@
+/* CSS Team Section */
 .team-section {
-  padding: 50px;
-  background-color: #f4f4f9;
+  padding: 60px 20px; /* Padding lebih besar untuk ruang */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradien lembut */
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px; /* Jarak lebih besar dari heading */
 }
 
 .team-members {
   display: flex;
+  gap: 40px; /* Tambahkan jarak antar anggota tim untuk visual lebih longgar */
+  width: 100%;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Menambahkan ini agar anggota tim rapi jika ada lebih banyak */
+  flex-wrap: wrap; /* Agar tampilan lebih fleksibel */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .team-member {
   text-align: center;
-  opacity: 0; /* Initial opacity for smooth transition */
+  opacity: 0; /* Initial opacity untuk smooth transition */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 200px; /* Ukuran tetap dan seragam */
+}
+
+.team-member:hover img {
+  transform: scale(1.1); /* Efek zoom saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tambahkan shadow pada hover */
 }
 
 .team-member img {
-  width: 200px;
+  width: 100%;
+  max-width: 180px;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transform saat hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow dasar */
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.team-member p span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
 }

@@ -1,21 +1,143 @@
+/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
 }
 
-.nav-links {
-  list-style: none;
+.logo {
   display: flex;
-}
-
-.nav-links li {
-  margin-left: 20px;
-  cursor: pointer;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 .logo img {
-  width: 100px;
+  width: 70px;
   height: auto;
+  margin-right: 8px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links li {
+  margin-left: 5px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 20;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #555;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Animation for burger icon transformation */
+.burger.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%; /* Cover only a quarter of the screen on the right */
+    max-height: 220px; /* Just enough space for the links */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 20px; /* Added extra padding at the bottom */
+    transform: translateY(-20%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links li {
+    font-size: 1rem;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links li:last-child {
+    padding-bottom: 15px; /* Additional space under the last item */
+  }
+
+  .nav-links li:hover {
+    color: #007acc; /* Subtle color change on hover */
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+
+  .nav-links li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Sembunyikan tautan di perangkat kecil */
+    width: 100%;
+  }
+
+  .burger {
+    display: block; /* Tampilkan tombol burger */
+  }
 }

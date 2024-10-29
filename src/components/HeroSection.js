@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import './HeroSection.css'; // Tambahkan CSS untuk styling
-import view from '../assets/view.png'; // Ganti dengan path file yang sesuai
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
+import "./HeroSection.css";
+import view from "../assets/view.png";
 
 const heroVariants = {
   hidden: { opacity: 0, x: -100 },
@@ -16,8 +17,8 @@ const imageVariants = {
 
 function HeroSection() {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Set to false to allow the animation to repeat
-    threshold: 0.1, // Trigger when 10% of the element is visible
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
   return (
@@ -25,14 +26,13 @@ function HeroSection() {
       <motion.div
         className="hero-content"
         initial="hidden"
-        animate={inView ? "visible" : "hidden"} // Trigger animation on visibility
+        animate={inView ? "visible" : "hidden"}
         variants={heroVariants}
       >
         <h1>Desa Bangeran</h1>
         <p>Kecamatan Dawarblandong, Kabupaten Mojokerto</p>
         <div className="hero-buttons">
-          <button>Get Started</button>
-          <button>Contact Us</button>
+          <Link to="/contact">Contact Us</Link>
         </div>
       </motion.div>
       <motion.img
@@ -40,7 +40,7 @@ function HeroSection() {
         src={view}
         alt="Desa Bangeran"
         initial="hidden"
-        animate={inView ? "visible" : "hidden"} // Trigger animation on visibility
+        animate={inView ? "visible" : "hidden"}
         variants={imageVariants}
       />
     </section>

@@ -6,16 +6,17 @@ import InfoCards from './components/InfoCards';
 import TeamSection from './components/TeamSection';
 import StepsSection from './components/StepsSection';
 import BUMDes from './components/BUMDes';
-import Blog from './components/Blog'; // Import the new Blog component
-import ContactSection from './components/ContactSection';
-import './App.css';
+import Blog from './components/Blog';
 import Potensi from './components/Potensi';
+import Footer from './components/footer';
+import ContactUs from './components/ContactUs'; // Import ContactUs component
+import './App.css';
 
 function App() {
   const location = useLocation();
 
-  // Check if the current path is not "/bumdes" or "/produk"
-  const shouldShowContent = !['/bumdes', '/produk', '/potensi'].includes(location.pathname);
+  // Show content based on path
+  const shouldShowContent = !['/bumdes', '/produk', '/potensi', '/contact'].includes(location.pathname);
 
   return (
     <div className="App">
@@ -25,17 +26,19 @@ function App() {
         <Route path="/bumdes" element={<BUMDes />} />
         <Route path="/produk" element={<Blog />} />
         <Route path="/potensi" element={<Potensi />} />
+        <Route path="/contact" element={<ContactUs />} /> {/* Add route for ContactUs */}
       </Routes>
 
-      {/* Conditionally render these components */}
+      {/* Conditionally render components */}
       {shouldShowContent && (
         <>
           <InfoCards />
-          <  TeamSection />
+          <TeamSection />
           <StepsSection />
-          <ContactSection />
         </>
       )}
+      
+      <Footer />
     </div>
   );
 }

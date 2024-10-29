@@ -1,27 +1,122 @@
 .info-cards {
-  padding: 50px;
-  background-color: #e0f7fa;
+  padding: 60px 20px; /* Tambahkan padding atas/bawah */
+  background-color: #f9fafc;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center; /* Memusatkan teks */
+}
+
+.info-cards h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px; /* Tambahkan jarak bawah */
+}
+
+.info-cards p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px; /* Tambahkan jarak antara paragraf dan cards-container */
 }
 
 .cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 30px; /* Lebih besar untuk jarak antar kartu */
+  max-width: 100%;
+  justify-content: center;
+  padding: 0 20px;
 }
 
 .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0; /* Set initial opacity to 0 for smooth animation */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow yang lebih lembut */
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: translateY(0);
 }
 
 .card h3 {
+  font-size: 1.5rem;
+  color: #333;
   margin-bottom: 10px;
 }
 
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
 .card a {
-  text-decoration: none;
+  font-size: 1rem;
   color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efek hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Shadow lebih besar pada hover */
+}
+
+.card a:hover {
+  color: #0056b3; /* Warna link lebih gelap pada hover */
+}
+
+/* Tampilan tim untuk menambah keteraturan */
+.team-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f4f4f9;
+  max-width: 100%;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.team-member {
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan shadow pada gambar */
+}
+
+.team-member p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
