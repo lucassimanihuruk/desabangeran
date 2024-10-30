@@ -4,24 +4,27 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
   width: 100%;
   position: relative;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .logo img {
-  width: 70px;
+  width: 60px;
   height: auto;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .nav-links {
@@ -32,32 +35,45 @@
 
 .nav-links ul {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .nav-links li {
-  margin-left: 5px;
+  margin-left: 10px;
   cursor: pointer;
   list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  color: #007acc;
+  background-color: rgba(0, 122, 204, 0.1);
 }
 
 .burger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  transition: transform 0.3s ease;
   z-index: 20;
 }
 
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #555;
+  background-color: #333;
   margin: 4px 0;
   transition: all 0.3s ease;
 }
 
-/* Animation for burger icon transformation */
+/* Burger menu toggle */
 .burger.toggle .line1 {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -70,21 +86,20 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive adjustments */
+/* Mobile menu */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 0;
-    width: 100%; /* Cover only a quarter of the screen on the right */
-    max-height: 220px; /* Just enough space for the links */
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: center;
-    padding: 10px 0 20px; /* Added extra padding at the bottom */
-    transform: translateY(-20%);
+    padding: 15px 0;
+    transform: translateY(-30%);
     opacity: 0;
     pointer-events: none;
     transition: all 0.4s ease;
@@ -112,32 +127,23 @@
     transition: color 0.2s ease;
   }
 
-  .nav-links li:last-child {
-    padding-bottom: 15px; /* Additional space under the last item */
-  }
-
   .nav-links li:hover {
-    color: #007acc; /* Subtle color change on hover */
+    color: #007acc;
   }
 }
 
+/* Smaller screen adjustments */
 @media (max-width: 400px) {
   .logo {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .nav-links li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
-}
 
-@media (max-width: 768px) {
   .nav-links {
-    display: none; /* Sembunyikan tautan di perangkat kecil */
     width: 100%;
-  }
-
-  .burger {
-    display: block; /* Tampilkan tombol burger */
+    padding: 20px 10px;
   }
 }
