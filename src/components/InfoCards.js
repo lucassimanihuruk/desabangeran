@@ -1,66 +1,48 @@
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import './InfoCards.css';
 
-const cardVariants = {
-  hiddenLeft: { opacity: 0, x: -50 },
-  hiddenRight: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
-};
-
-const InfoCard = ({ title, description, link, index }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false });
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    } else {
-      controls.start(index % 2 === 0 ? 'hiddenLeft' : 'hiddenRight');
-    }
-  }, [controls, inView, index]);
-
-  return (
-    <motion.div
-      ref={ref}
-      className="card"
-      initial={index % 2 === 0 ? 'hiddenLeft' : 'hiddenRight'}
-      animate={controls}
-      variants={cardVariants}
-    >
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <a href={link}>Read More</a>
-    </motion.div>
-  );
-};
-
 function InfoCards() {
-  const cardData = [
-    { title: 'Perangkat BUMDes', description: 'Kepala Desa Beserta Perangkatnya.', link: '#' },
-    { title: 'Usaha Milik BUMDes', description: 'Badan Usaha Milik Desa.', link: '#' },
-    { title: 'Produk Unggulan BUMDes', description: 'Produk-produk Unggulan Desa.', link: '#' },
-    { title: 'Potensi Unggulan Desa', description: 'Potensi Pengembangan Produk Unggulan Desa.', link: '#' },
-  ];
-
   return (
     <section className="info-cards">
       <h2>Jelajahi Berbagai Hal di Desa Bangeran</h2>
       <p>Melalui website ini, Anda dapat menelusuri informasi tentang BUMDes dan potensi unggulan desa.</p>
-      <div className="cards-container">
-        {cardData.map((card, index) => (
-          <InfoCard 
-            key={index} 
-            title={card.title} 
-            description={card.description} 
-            link={card.link} 
-            index={index} 
+
+      <div className="content-container">
+        {/* Left Column for Cards */}
+        <div className="card-container">
+          <div className="card">
+            <h3>Perangkat BUMDes</h3>
+            <p>Kepala Desa Beserta Perangkatnya.</p>
+          </div>
+          <div className="card">
+            <h3>Usaha Milik BUMDes</h3>
+            <p>Badan Usaha Milik Desa.</p>
+          </div>
+          <div className="card">
+            <h3>Produk Unggulan BUMDes</h3>
+            <p>Produk-produk Unggulan Desa.</p>
+          </div>
+          <div className="card">
+            <h3>Potensi Unggulan Desa</h3>
+            <p>Potensi Pengembangan Produk Unggulan Desa.</p>
+          </div>
+        </div>
+
+        {/* Right Column for Video */}
+        <div className="video-container">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/jpvkCiPxdAw"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
-        ))}
+        </div>
       </div>
     </section>
   );
 }
 
-export default InfoCards;
+export default InfoCards; 

@@ -20,8 +20,9 @@ function Navbar() {
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/bumdes">BUMDes</Link></li>
-          <li><Link to="/produk">Produk</Link></li>
           <li><Link to="/potensi">Potensi</Link></li>
+          <li><Link to="/product">Product</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
         </ul>
       </div>
       <div className={`burger ${isOpen ? 'toggle' : ''}`} onClick={toggleMenu}>

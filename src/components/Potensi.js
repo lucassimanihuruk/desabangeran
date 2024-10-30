@@ -2,6 +2,9 @@ import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Potensi.css';
+import Sapi from '../assets/sapi.jpg'; 
+import Kambing from '../assets/kambing.jpg';
+import Ayam from '../assets/ayam.jpg';
 
 const potensiVariants = {
   hiddenLeft: { opacity: 0, x: -50 },
@@ -66,6 +69,24 @@ const Potensi = () => {
           description="Mangga merupakan salah satu komoditas unggulan yang dihasilkan oleh Desa Bangeran. Potensi besar buah mangga dari desa ini tidak hanya memenuhi kebutuhan pasar lokal tetapi juga menjadi sumber pendapatan yang penting bagi masyarakat. Dengan kondisi alam yang mendukung, teknik budidaya yang baik, dan dukungan dari pemerintah serta masyarakat, hasil pertanian mangga di desa ini dapat terus meningkatkan kesejahteraan masyarakat."
           imageUrl="https://gkmdblog.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2023/12/16193752/Blog-Mangga-Indonsia.jpeg"
           isLeft={false}
+        />
+        <PotensiSection
+          title="Sapi"
+          description="Peternakan sapi di Desa Bangeran berkembang pesat. Sapi dipelihara untuk diambil daging dan susunya, yang menjadi sumber protein penting bagi masyarakat. Selain itu, sapi juga menjadi sumber pupuk alami bagi lahan pertanian setempat."
+          imageUrl={Sapi}
+          isLeft={true}
+        />
+        <PotensiSection
+          title="Ayam"
+          description="Ayam menjadi salah satu ternak favorit di desa ini. Pemeliharaan ayam untuk telur dan daging menghasilkan produk yang alami dan sehat. Ayam-ayam ini menjadi salah satu komoditas unggulan yang banyak diminati pasar lokal."
+          imageUrl={Ayam}
+          isLeft={false}
+        />
+        <PotensiSection
+          title="Kambing"
+          description="Peternakan kambing tidak hanya menghasilkan daging, tetapi juga susu kambing yang semakin diminati karena manfaat kesehatannya. Selain itu, kambing juga penting dalam acara adat dan keagamaan, meningkatkan permintaan pasar lokal."
+          imageUrl={Kambing}
+          isLeft={true}
         />
       </main>
     </div>

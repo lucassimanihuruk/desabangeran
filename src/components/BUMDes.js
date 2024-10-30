@@ -132,8 +132,7 @@ function BUMDes() {
               transition={{ duration: 0.4, delay: index * 0.1 }} // Add delay based on index
             >
               <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <a href={service.link}>read more</a>  
+              <p>{service.description}</p> 
             </motion.div>
           ))}
         </div>

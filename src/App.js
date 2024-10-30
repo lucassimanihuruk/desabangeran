@@ -6,17 +6,17 @@ import InfoCards from './components/InfoCards';
 import TeamSection from './components/TeamSection';
 import StepsSection from './components/StepsSection';
 import BUMDes from './components/BUMDes';
-import Blog from './components/Blog';
 import Potensi from './components/Potensi';
 import Footer from './components/footer';
 import ContactUs from './components/ContactUs'; // Import ContactUs component
 import './App.css';
+import Product from './components/Product';
 
 function App() {
   const location = useLocation();
 
   // Show content based on path
-  const shouldShowContent = !['/bumdes', '/produk', '/potensi', '/contact'].includes(location.pathname);
+  const shouldShowContent = !['/bumdes', '/potensi', '/contact', '/product'].includes(location.pathname);
 
   return (
     <div className="App">
@@ -24,9 +24,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/bumdes" element={<BUMDes />} />
-        <Route path="/produk" element={<Blog />} />
         <Route path="/potensi" element={<Potensi />} />
         <Route path="/contact" element={<ContactUs />} /> {/* Add route for ContactUs */}
+        <Route path="/product" element={<Product />} />
       </Routes>
 
       {/* Conditionally render components */}
