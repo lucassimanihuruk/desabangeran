@@ -86,11 +86,6 @@ function BUMDes() {
       link: "#pemasaran-digital"
     },
     {
-      title: "Pengelolaan Keuangan",
-      description: "Pengelolaan keuangan yang transparan dan akuntabel untuk usaha desa.",
-      link: "#pengelolaan-keuangan"
-    },
-    {
       title: "Layanan Konsultasi",
       description: "Konsultasi usaha dan manajemen untuk warga yang ingin memulai usaha.",
       link: "#layanan-konsultasi"
@@ -109,7 +104,7 @@ function BUMDes() {
       >
         <h1>Usaha dan Produk</h1>
         <p>
-          Desa Bangeran, yang terletak di Kecamatan Dawarblandong, Kabupaten Mojokerto, terkenal dengan berbagai usaha produktif yang menjadi tulang punggung ekonomi masyarakatnya. Salah satu andalan desa ini adalah produk olahan pertanian seperti cabai, jagung, dan kacang yang diproses dengan teknik modern untuk menghasilkan produk berkualitas tinggi.
+        Badan Usaha Milik Desa (BUMDes) merupakan usaha desa yang dikelola oleh Pemerintah Desa, dan berbadan hukum. Pemerintah Desa dapat mendirikan Badan Usaha Milik Desa sesuai dengan kebutuhan dan potensi Desa. Pembentukan Badan Usaha Milik Desa ditetapkan dengan Peraturan Desa. Kepengurusan Badan Usaha Milik Desa terdiri dari Pemerintah Desa dan masyarakat desa setempat. 
         </p>
       </motion.header>
 

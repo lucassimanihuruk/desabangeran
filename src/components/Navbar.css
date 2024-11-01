@@ -1,18 +1,17 @@
-/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #ffffff;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  background-color: #e6f7ff;
+  color: white;
+  position: fixed; /* Buat navbar tetap di atas */
   width: 100%;
-  position: relative;
-  border-bottom: 2px solid #e0e0e0;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Pastikan navbar berada di atas konten lain */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -20,30 +19,26 @@
   font-weight: 600;
   color: #333;
 }
-
 .logo img {
   width: 60px;
   height: auto;
   margin-right: 10px;
 }
-
 .nav-links {
   display: flex;
   list-style: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .nav-links ul {
   display: flex;
   gap: 15px;
+  margin-right: 25px;
 }
-
 .nav-links li {
-  margin-left: 10px;
+  margin-left: 20px;
   cursor: pointer;
   list-style: none;
 }
-
 .nav-links a {
   text-decoration: none;
   color: #333;
@@ -52,19 +47,16 @@
   transition: color 0.3s, background-color 0.3s;
   border-radius: 5px;
 }
-
 .nav-links a:hover {
   color: #007acc;
   background-color: rgba(0, 122, 204, 0.1);
 }
-
 .burger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   z-index: 20;
 }
-
 .burger div {
   width: 25px;
   height: 3px;
@@ -72,21 +64,15 @@
   margin: 4px 0;
   transition: all 0.3s ease;
 }
-
-/* Burger menu toggle */
 .burger.toggle .line1 {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .burger.toggle .line2 {
   opacity: 0;
 }
-
 .burger.toggle .line3 {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-
-/* Mobile menu */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -105,43 +91,35 @@
     transition: all 0.4s ease;
     z-index: 10;
   }
-
   .nav-links.open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
-
   .burger {
     display: flex;
+    margin-right: 25px;
   }
-
   .nav-links ul {
     flex-direction: column;
     gap: 15px;
   }
-
   .nav-links li {
     font-size: 1rem;
     padding: 10px 0;
     transition: color 0.2s ease;
   }
-
   .nav-links li:hover {
     color: #007acc;
   }
 }
-
-/* Smaller screen adjustments */
 @media (max-width: 400px) {
   .logo {
     font-size: 1rem;
   }
-
   .nav-links li {
     font-size: 0.9rem;
   }
-
   .nav-links {
     width: 100%;
     padding: 20px 10px;

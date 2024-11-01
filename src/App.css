@@ -1,18 +1,15 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +20,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,93 +31,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Mengatur jarak antara logo dan menu navigasi */
-  align-items: center; /* Menyejajarkan konten di tengah secara vertikal */
-  padding: 10px 20px; /* Tambahkan padding untuk memberikan ruang */
-  background-color: #fff; /* Bisa disesuaikan dengan warna yang diinginkan */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 50px; /* Sesuaikan ukuran logo */
-  height: auto;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none; /* Menghilangkan bullet list */
-}
-
-.nav-links li {
-  margin-left: 20px; /* Memberi jarak antar item menu */
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: black; /* Warna teks */
-}
-
-
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-  background-color: #f4f4f9;
-}
-
-.hero-content {
-
-  max-width: 50%;
-  align-items: center;
-}
-
-.hero-buttons button {
-  margin-right: 10px;
-  padding: 10px 20px;
-}
-
-.hero-image {
-  max-width: 40%;
-}
-
-
-
-
-.info-cards {
-  padding: 50px;
-  background-color: #e0f7fa;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card a {
-  text-decoration: none;
-  color: #007BFF;
-}
-
-
-

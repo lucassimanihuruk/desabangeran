@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './InfoCards.css';
 
 function InfoCards() {
@@ -10,25 +11,23 @@ function InfoCards() {
       <div className="content-container">
         {/* Left Column for Cards */}
         <div className="card-container">
-          <div className="card">
+          <Link to="/perangkat" className="card">
             <h3>Perangkat BUMDes</h3>
             <p>Kepala Desa Beserta Perangkatnya.</p>
-          </div>
-          <div className="card">
+          </Link>
+          <Link to="/bumdes" className="card">
             <h3>Usaha Milik BUMDes</h3>
             <p>Badan Usaha Milik Desa.</p>
-          </div>
-          <div className="card">
-            <h3>Produk Unggulan BUMDes</h3>
-            <p>Produk-produk Unggulan Desa.</p>
-          </div>
-          <div className="card">
+          </Link>
+          <Link to="/potensi" className="card">
             <h3>Potensi Unggulan Desa</h3>
             <p>Potensi Pengembangan Produk Unggulan Desa.</p>
-          </div>
+          </Link>
+          <Link to="/product" className="card">
+            <h3>Produk Unggulan BUMDes</h3>
+            <p>Produk-produk Unggulan Desa.</p>
+          </Link>
         </div>
-
-        {/* Right Column for Video */}
         <div className="video-container">
           <iframe
             width="100%"
@@ -45,4 +44,4 @@ function InfoCards() {
   );
 }
 
-export default InfoCards; 
+export default InfoCards;

@@ -1,60 +1,93 @@
-/* StepsSection.css */
-
 .steps-section {
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Full-width gradient background */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  border-radius: 8px; /* Rounded corners */
-  width: 100%; /* Set width to 100% */
-  margin: auto; /* Center the section */
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .steps-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Gap between steps */
-  max-width: 1200px; /* Constrain width for better readability */
-  margin: auto; /* Center the content */
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
 }
-
 .steps-title {
-  text-align: center; /* Center the title */
-  font-size: 2rem; /* Larger font size for title */
-  margin-bottom: 30px; /* Margin below title for spacing */
-  color: #333; /* Color for title */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
 }
-
 .step {
   display: flex;
   align-items: center;
-  background: white; /* White background for steps */
-  border-radius: 8px; /* Rounded corners for each step */
-  padding: 20px; /* Padding inside each step */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for step cards */
-  transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .step:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 .step-number {
-  font-size: 2.5rem; /* Increased font size for emphasis */
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-right: 20px;
-  color: #007bff; /* Modern blue color */
+  margin-right: 25px;
+  color: #007bff;
+  min-width: 50px;
+  text-align: center;
 }
-
 .step-details {
   flex: 1;
-  font-size: 1.1rem; /* Slightly larger font size */
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
 }
-
 .step-details h3 {
-  margin: 0 0 10px; /* Margin for spacing */
-  font-size: 1.5rem; /* Larger title size */
-  color: #333; /* Darker color for titles */
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .steps-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+  .step-number {
+    font-size: 2rem;
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  .steps-title {
+    font-size: 1.8rem;
+  }
+  .step {
+    padding: 15px;
+  }
+  .step-number {
+    font-size: 1.8rem;
+  }
+  .step-details h3 {
+    font-size: 1.4rem;
+  }
+  .step-details {
+    font-size: 1rem;
+  }
 }

@@ -9,7 +9,8 @@ body {
   background-color: #58c5cf;
   text-align: center;
   padding: 2rem;
-  border-bottom: 4px solid #007acc; /* Bottom border for emphasis */
+  border-bottom: 4px solid #007acc;
+  margin-top: 60px;
 }
 
 .header h1 {
